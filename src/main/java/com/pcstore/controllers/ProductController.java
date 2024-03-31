@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class ProductController {
     private final ProductService productService;
     @GetMapping("/")
-    public String products(Model model){
-        model.addAttribute("products", productService.productList());
+    public String products(String name, Model model){
+        model.addAttribute("products", productService.productList(name));
         return "/products";
     }
     @GetMapping("/product/{id}")

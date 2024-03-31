@@ -4,12 +4,18 @@
     <title>Computer Store</title>
 </head>
 <body>
+<form action="/" method="get">
+    Поиск товара: <input type="text" name="name"><br>
+    <input type="submit" value="Поиск"/>
+</form>
 <h3>Список товаров:</h3><br>
 <div>
     <#list products as product>
         <p>${product.name} | ${product.price}р. | Продавец: ${product.seller}</p>
         <a href="/product/${product.id}">Перейти на страницу товара</a>
         <br>
+        <#else>
+            <h3>Товаров нет</h3>
     </#list>
     <br>
     <h2>
