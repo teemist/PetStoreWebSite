@@ -20,11 +20,15 @@
     <br>
     <h2>
         Добавить товар
-        <form action="/product/new" method="post"> <br>
+        <form action="/product/new" method="post" enctype="multipart/form-data"> <br>
             Название товара: <input type="text" name="name"> <br>
             Описание товара: <input type="text" name="description"> <br>
             Стоимость: <input type="number" name="price"> <br>
             Продавец: <input type="text" name="seller"> <br>
+            Главное фото: <input type="file" name="file1"> <br>
+            Второе фото: <input type="file" name="file2"> <br>
+            Третье фото: <input type="file" name="file3"> <br>
+
             <input type="submit" value="Добавить"> <br>
         </form>
     </h2>
